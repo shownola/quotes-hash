@@ -61,10 +61,10 @@ class AlgoHashTable:
 hash_table = AlgoHashTable(256)
 
 with open('data.txt') as f:
-    line = f.readline().split(":")
-    key, value = line
-    print('key:', key, 'value:', value)
-    hash_table.set_val(key, value)
+    for line in f:
+        key, value = line.split(":")
+        hash_table.set_val(key, value)
 
 
-print(hash_table.get_val('dwzypljgnm@goexample.com'))
+print(hash_table.get_val('jackson@email.com'))
+print(hash_table.get_val('jonathan@email.com'))
